@@ -211,6 +211,66 @@ p {
 .gallery_image img {
 	width: 100%;
 }
+/*******************************/
+.caption-link {
+	position: relative;
+	z-index: 2;
+	display: block;
+	color: red;
+	min-height: 50%;
+	background: #222;
+	overflow: hidden;
+}
+.caption-link:before,
+.caption-link:after {
+	position: absolute;
+	opacity: 0;
+}
+
+.gallery_image:hover .caption-link::before {
+	opacity: 0.7;
+	transition: opacity 0.6s ease-out;
+}
+.gallery_image:hover .caption-link::after {
+	opacity: 1;
+	transition: opacity 0.6s ease-out;
+}
+
+.caption-link:before {
+    content: attr(data-title);
+	bottom: 0;
+	display: block;
+	background: #333;
+	width: 100%;
+	height: 80%;
+	color: #fff;
+	font-size: 1.125em; /* 18px */
+    font-weight: bold;	
+	text-align: center;
+	padding-top: 45px;
+	text-shadow: 0px 0px 5px rgb(0,0,0), 2px 2px 5px rgb(0,0,0);
+}
+
+.caption-link:after {
+	content: attr(data-link);
+	bottom: 20px;
+	left: 50%;
+	width: 100px;
+	margin-left: -50px;
+	height: 20px;
+	background: #ddd;
+	border-radius: 10px;
+	text-align: center;
+	line-height: 20px;
+	display: table-cell;
+	color: #000;
+}
+
+.caption-link:hover:after {
+	background: #64ff98;
+}
+
+/*******************************/
 
 .banner {
 	background-color: #343538;
