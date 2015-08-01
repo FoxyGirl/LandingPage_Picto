@@ -22,8 +22,12 @@
 		</div>
 	</header>
 	<main>
-		<div class="top_preview wrap">
-			<img src="images/top_preview.jpg" alt="top_preview">
+		<div class="top_preview wrap" id="top_preview">
+			<img class="prw-active" src="images/top_preview.jpg" alt="top_preview">
+			<img src="images/top_preview_2.jpg" alt="top_preview">
+			<img src="images/top_preview_3.jpg" alt="top_preview">
+			<img src="images/top_preview_4.jpg" alt="top_preview">
+			<img src="images/top_preview_5.jpg" alt="top_preview">		
 		</div>
 		<article class="wrap blog">
 			<h3>Main Blog Post Heading</h3>
@@ -161,5 +165,27 @@
 			</p>
 		</div>
 	</footer>
+	<script>
+	//Слайдер, переключаемый кликом по фото 
+		//находим все фото, помещенные в слайдер
+		var el = document.querySelectorAll('.top_preview img ');
+		//определяем слайдер
+		var slider = document.getElementById('top_preview');
+		//счетчик
+		var i = 0;	
+		//при клике на слайдере переключаем у изображений класс 'prw-active'  по кругу
+		slider.onclick = function() {
+			var z = i%el.length;			
+			el[z].classList.toggle('prw-active');
+			if (z >= (el.length-1)) {
+				el[0].classList.toggle('prw-active');
+			} else {
+			el[z+1].classList.toggle('prw-active');
+			};
+			++i;
+		};
+		
+	</script>
+	
   </body>
  </html>
