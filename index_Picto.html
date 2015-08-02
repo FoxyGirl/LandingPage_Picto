@@ -168,7 +168,7 @@
 	<script>
 	//Слайдер, переключаемый кликом по фото 
 		//находим все фото, помещенные в слайдер
-		var el = document.querySelectorAll('.top_preview img ');
+		var el = document.querySelectorAll('.top_preview img');
 		//определяем слайдер
 		var slider = document.getElementById('top_preview');
 		//счетчик
@@ -182,8 +182,26 @@
 			} else {
 			el[z+1].classList.toggle('prw-active');
 			};
-			++i;
+			++i;			
 		};
+		
+		//****************************************
+			//отображение текущего времени
+			UpdateTime();
+			var Time = new Date(); 
+			//запускаем обновление отображения каждую секунду
+			setInterval(UpdateTime,3000);
+
+
+		  function UpdateTime()
+		  {
+			var CurrTime = new Date(); 
+			console.log(CurrTime - Time);
+			if ((CurrTime - Time) > 1000) {
+			slider.click();
+			}
+		  }		
+		
 		
 	</script>
 	
