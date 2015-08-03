@@ -184,6 +184,14 @@
 			};
 			++i;			
 		};
+
+		slider.style.height = document.documentElement.clientWidth*0.466 + 'px';
+		window.onresize = function() {
+			if (document.documentElement.clientWidth < 600) {
+			slider.style.height = document.documentElement.clientWidth*0.466 + 'px';		
+			}
+		}
+
 		
 		//****************************************
 			//автоматический запуск слайдера
