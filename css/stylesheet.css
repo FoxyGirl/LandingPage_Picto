@@ -158,6 +158,14 @@ p {
 	text-align: center;
 	line-height: 35px;
 }
+.a_button:hover {
+	background-color: #64ff98;
+	color: #333;
+}
+
+a:hover h3 {
+	color: #64ff98;
+}
 
 .features {
 	text-align: center;

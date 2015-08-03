@@ -186,22 +186,21 @@
 		};
 		
 		//****************************************
-			//отображение текущего времени
-			UpdateTime();
-			var Time = new Date(); 
-			//запускаем обновление отображения каждую секунду
-			setInterval(UpdateTime,3000);
-
-
-		  function UpdateTime()
-		  {
-			var CurrTime = new Date(); 
-			console.log(CurrTime - Time);
-			if ((CurrTime - Time) > 1000) {
-			slider.click();
+			//автоматический запуск слайдера
+			//через 0.5 секунды с интервалом 3 секунды;
+			var startTime = 500;
+			var stepTime = 3000;
+			setTimeout(changeSlaid, startTime);
+			//выполняет функцию UpdateTime() 
+			//и устанавливает интервал stepTime милисекунд для её повторения
+			function changeSlaid() {
+				UpdateTime();
+				setInterval(UpdateTime, stepTime);
 			}
-		  }		
-		
+			//производит клик на слайдере
+			function UpdateTime() {
+				slider.click();
+			}			
 		
 	</script>
 	
