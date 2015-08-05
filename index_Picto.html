@@ -185,13 +185,16 @@
 			++i;			
 		};
 
-		slider.style.height = document.documentElement.clientWidth*0.466 + 'px';
-		window.onresize = function() {
+		changeSliderWidth();
+		window.onresize = changeSliderWidth;
+		
+		function changeSliderWidth() {
 			if (document.documentElement.clientWidth < 600) {
 			slider.style.height = document.documentElement.clientWidth*0.466 + 'px';		
+			} else {
+			slider.style.height = '280px';
 			}
 		}
-
 		
 		//****************************************
 			//автоматический запуск слайдера
