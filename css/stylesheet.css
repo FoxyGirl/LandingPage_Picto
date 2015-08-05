@@ -89,6 +89,10 @@ footer .wrap {
 .wrap p, .wrap h3 {
 	margin: 20px 30px;
 }
+.wrap.features h3 {
+	margin: 10px 30px;
+}
+
 header .wrap p {
 	font-family: HelveticaNeue, Arial, sans-serif;
 	font-size: 0.8em; /* 13px */
@@ -144,7 +148,7 @@ p {
 	color: #a7a7a7;
 }
 
-.blog {
+.wrap.blog {
 	padding: 10px 0;
 	margin-bottom: 15px;
 }
@@ -156,6 +160,7 @@ p {
 	height: 35px;
 	background-color: #343538;
 	margin: 20px 30px;
+	margin: 20px auto;
 	color: #fff;
 	font-size: 0.875em; /* 14px */	
 	text-align: center;
@@ -177,13 +182,19 @@ a:hover h3 {
 	margin-bottom: 15px;
 }
 .feature1, 
+.feature2,
 .feature3 {
-	float: left;
-	width: 33%;
+	float: none;
+	width: 100%%;
 }
-.feature2 {
-	float: left;
-	width: 34%;
+
+.sindication img {
+	width: 84%;
+	margin: 0 7%;
+}
+
+.checkOut img {
+	width: 100%;
 }
 
 .znak-ankor,
@@ -220,12 +231,12 @@ a:hover h3 {
 	overflow: auto;
 }
 .block1 {
-	width: 50%;
-	float: left;
+	width: 100%;
+	float: none;
 }
 .block2 {
-	width: 50%;
-	float: right;
+	width: 100%;
+	float: none;
 }
 .work {
 	overflow: auto;
@@ -240,7 +251,7 @@ a:hover h3 {
 }
 .gallery_image {
 	float: left;
-	width: 33.33333%;
+	width: 50%;
 	line-height: 0;
 }
 
@@ -347,14 +358,16 @@ footer p {
 	text-align: center;
 }
 .social {
-	margin-top: 30px;
+	width: 70%;
+	margin: 25px auto 0 auto;
 	text-align: center;
 }
 .social li{
 	width: 34px;
 	height: 34px;
 	display: inline-block;
-	margin: 0 5px; 
+	margin: 0 5px;
+	margin: 5px;
 	box-shadow: inset 0 0 10px 2px rgba(30, 30, 30, 0.8);
 	border-radius: 50%;
 	background-color: #eee;
@@ -435,6 +448,41 @@ footer a:first-child{
 	color: #64ff98;
 }
 
+@media only all and (min-width: 440px) {
+	.feature1, 
+	.feature2 {
+		float: left;
+		width: 33%;
+	}
+	.feature3 {
+		float: right;
+		width: 34%;
+	}
+	
+	.a_button {
+		margin: 20px 30px;
+	}
+	
+	.sindication img {
+		width: 50%;
+		margin: 0;
+	}
+
+	.block1 {
+		width: 50%;
+		float: left;
+	}
+	.block2 {
+		width: 50%;
+		float: right;
+	}
+	
+	.gallery_image {
+		width: 33.33333%;
+	}
+	
+}
+
 @media only all and (min-width: 600px) {
 	.wrap {
 		width: 600px;
@@ -446,4 +494,15 @@ footer a:first-child{
 		height: 280px;
 		overflow: hidden;
 	}
+	.sindication img {
+		width: auto;
+	}
+	
+	.checkOut img {
+		width: auto;
+	}
+
+	
 }
+
+
