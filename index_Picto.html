@@ -165,22 +165,26 @@
 			</p>
 		</div>
 	</footer>
+	<!-- Go to Top -->  -->
+		<div id="toTop"></div>
+	<!-- End of Go to Top --> 	
 	<script>
 	//Слайдер, переключаемый кликом по фото 
 		//находим все фото, помещенные в слайдер
-		var el = document.querySelectorAll('.top_preview img');
+		var imgSlider = document.querySelectorAll('.top_preview img');
 		//определяем слайдер
 		var slider = document.getElementById('top_preview');
 		//счетчик
 		var i = 0;	
+		var z;		
 		//при клике на слайдере переключаем у изображений класс 'prw-active'  по кругу
 		slider.onclick = function() {
-			var z = i%el.length;			
-			el[z].classList.toggle('prw-active');
-			if (z >= (el.length-1)) {
-				el[0].classList.toggle('prw-active');
+			z = i%imgSlider.length;			
+			imgSlider[z].classList.toggle('prw-active');
+			if (z >= (imgSlider.length-1)) {
+				imgSlider[0].classList.toggle('prw-active');
 			} else {
-			el[z+1].classList.toggle('prw-active');
+			imgSlider[z+1].classList.toggle('prw-active');
 			};
 			++i;			
 		};
@@ -212,7 +216,30 @@
 			//производит клик на слайдере
 			function UpdateTime() {
 				slider.click();
-			}			
+			}
+			
+		/********************/
+	
+		/* Scrolling Window*/
+		var el = document.getElementById('toTop');	
+		//если окно проскроллировано на 50px, показываем кнопку для прокрутки наверх
+		window.onscroll = function () {
+			el.style.display = (window.pageYOffset > '50' ? 'block' : 'none');
+		}	
+		//обработчик клика по кнопки прокрутки
+		el.addEventListener('click', function(e) {
+			e.preventDefault();
+			toUp();
+		}, false);
+		
+		//функция прокрутки окна наверх
+		function toUp() {
+			//переменная скорость тем больше, чем больше промотали вниз
+			var speed = window.pageYOffset/10;
+			window.scrollBy(0,-speed);
+			if (window.pageYOffset > 0) {requestAnimationFrame(toUp);}
+			}		
+		/********************/			
 		
 	</script>
 	
