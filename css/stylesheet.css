@@ -463,8 +463,8 @@ footer a:first-child{
 	color: #64ff98;
 }
 /* Элемент прокрутки вверх*/
-#toTop {
-	display: none;
+#toTop a{
+	display: block;
 	position: fixed;
 	z-index: 100;
 	width: 50px;
@@ -482,7 +482,7 @@ footer a:first-child{
 	padding: 6px;
 }
 
-#toTop:hover {
+#toTop a:hover {
 	opacity: 1;
 }
 

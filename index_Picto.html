@@ -13,15 +13,18 @@
   </head>
 
   <body>
+	<!-- Main Header -->  
 	<header>
 		<div class="wrap">
 			<div class="logo">
 				<a href="#">Picto</a>
 			</div>
-			<p>Having Trouble Viewing it?  <a href="#" target="A" class="a_href">View Online.</a></p>
+			<p>Having Trouble Viewing it?  <a href="#" target="A" class="a_href">View&nbsp;Online.</a></p>
 		</div>
 	</header>
+	<!-- End of Main Header -->  
 	<main>
+		<!-- Slider on JS -->
 		<div class="top_preview wrap" id="top_preview">
 			<img class="prw-active" src="images/top_preview.jpg" alt="top_preview">
 			<img src="images/top_preview_2.jpg" alt="top_preview">
@@ -29,6 +32,7 @@
 			<img src="images/top_preview_4.jpg" alt="top_preview">
 			<img src="images/top_preview_5.jpg" alt="top_preview">		
 		</div>
+		<!-- End of Slider on JS -->		
 		<article class="wrap blog">
 			<h3>Main Blog Post Heading</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis lectus at arcu egestas fringilla fermentum eget ipsum. Vestibulum hendrerit dignissim nunc vel volutpat. Nulla facilisi. </p>
@@ -75,6 +79,7 @@
 			</div>
 			<img src="images/orangeS.jpg" alt="">
 		</section>
+		<!-- Section of Works on CSS -->		
 		<section class="wrap work">
 			<h3>Our Work</h3>
 			<p>Lorem ipsum dolor sit amet it sole consectetur adipiscing elit.</p>
@@ -111,8 +116,11 @@
 				</div>
 			</div>			
 		</section>
+		<!-- End of Section of Works on CSS -->		
+		<!-- Section reserved for Banner -->				
 		<section class="wrap banner">
 		</section>
+		<!-- End of Section reserved for Banner -->				
 		<section class="wrap sindication">
 				<a href="#">
 					<h3>Title Goes Here</h3>
@@ -128,6 +136,7 @@
 				</figure>
 		</article>			
 	</main>
+	<!-- Main Footer -->
 	<footer>
 		<div class="wrap">
 			<ul class="social">
@@ -165,8 +174,11 @@
 			</p>
 		</div>
 	</footer>
+	<!-- End of Main Footer -->	
 	<!-- Go to Top -->  -->
-		<div id="toTop"></div>
+	<div id="toTop">
+		<a href="#"></a> 
+	</div>
 	<!-- End of Go to Top --> 	
 	<script>
 	//Слайдер, переключаемый кликом по фото 
@@ -223,6 +235,7 @@
 		/* Scrolling Window*/
 		var el = document.getElementById('toTop');	
 		//если окно проскроллировано на 50px, показываем кнопку для прокрутки наверх
+		el.style.display = (window.pageYOffset > '50' ? 'block' : 'none');		
 		window.onscroll = function () {
 			el.style.display = (window.pageYOffset > '50' ? 'block' : 'none');
 		}	
