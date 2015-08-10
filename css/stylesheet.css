@@ -343,6 +343,7 @@ a:hover h3 {
 
 .checkOut {
 	overflow: auto;
+	margin-bottom: 15px;
 }
 
 .checkOut h3,
@@ -360,7 +361,7 @@ figcaption {
 }
 
 footer {
-	padding-bottom: 120px;
+	padding-bottom: 60px;
 	overflow: auto;
 }
 
@@ -521,7 +522,7 @@ footer a:first-child{
 	
 }
 
-@media only all and (min-width: 600px) {
+@media only all and (min-width: 660px) {
 	.wrap {
 		width: 600px;
 		margin: 0 auto;
@@ -540,7 +541,17 @@ footer a:first-child{
 		width: auto;
 	}
 
+	.features,
+	.sindication,
+	.work,
+	.banner,
+	.checkOut {
+		margin-bottom: 15px;
+	}	
 	
+	footer {
+		padding-bottom: 120px;
+	}
 }
 
 
