@@ -25,7 +25,9 @@
 	<!-- End of Main Header -->  
 	<main>
 		<!-- Slider on JS -->
-		<div class="top_preview wrap" id="top_preview">
+		<img class="prw_help wrap" src="images/top_preview.jpg" alt="top_preview">
+		
+		<div class="top_preview wrap hide" id="top_preview">
 			<img class="prw-active" src="images/top_preview.jpg" alt="top_preview">
 			<img src="images/top_preview_2.jpg" alt="top_preview">
 			<img src="images/top_preview_3.jpg" alt="top_preview">
@@ -182,10 +184,15 @@
 	<!-- End of Go to Top --> 	
 	<script>
 	//Слайдер, переключаемый кликом по фото 
+		//находим и скрываем вспомогательный элемент
+		var prwHelp = document.querySelector('.prw_help');
+		prwHelp.classList.add('hide');
 		//находим все фото, помещенные в слайдер
 		var imgSlider = document.querySelectorAll('.top_preview img');
-		//определяем слайдер
+		//определяем и показываем слайдер
 		var slider = document.getElementById('top_preview');
+		slider.classList.remove('hide');
+		
 		//счетчик
 		var i = 0;	
 		var z;		
@@ -204,7 +211,7 @@
 		changeSliderWidth();
 		window.onresize = changeSliderWidth;
 		
-		//изменение высоты слайдера, в зависимости от его ширины и ширины окна
+		//изменение высоты слайдера, в зависимости от его ширины и ширины окна для адаптивной модели при ширине окна менее 600px
 		function changeSliderWidth() {
 			if (document.documentElement.clientWidth < 600) {
 			slider.style.height = document.documentElement.clientWidth*0.466 + 'px';		

@@ -110,6 +110,17 @@ header p > a {
 }
 
 /* Верхний слайдер */
+
+.prw_help { /* Вспомогательный элемент при неработающем JS*/
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.hide { /* класс для скрывания элементов */
+	display: none;
+}
+
 .top_preview.wrap {
 	position: relative;
 	width: 100%;
