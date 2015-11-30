@@ -143,28 +143,28 @@
 		<div class="wrap">
 			<ul class="social">
 				<li>
-					<a href="#" id="twitter"  target="_blank" title="twitter"></a>
+					<a href="#" class="twitter"  target="_blank" title="twitter"></a>
 				</li>
 				<li>
-					<a href="#" id="facebook"  target="_blank" title="facebook"></a>
+					<a href="#" class="facebook"  target="_blank" title="facebook"></a>
 				</li>
 				<li>
-					<a href="#" id="rss"  target="_blank" title="rss"></a>
+					<a href="#" class="rss"  target="_blank" title="rss"></a>
 				</li>
 				<li>
-					<a href="#" id="printerest"  target="_blank" title="printerest"></a>
+					<a href="#" class="printerest"  target="_blank" title="printerest"></a>
 				</li>
 				<li>
-					<a href="#" id="google_plus"  target="_blank" title="google+"></a>
+					<a href="#" class="google_plus"  target="_blank" title="google+"></a>
 				</li>
 				<li>
-					<a href="#" id="dribbble"  target="_blank" title="dribbble"></a>
+					<a href="#" class="dribbble"  target="_blank" title="dribbble"></a>
 				</li>
 				<li>
-					<a href="#" id="linkedin"  target="_blank" title="linkedin"></a>
+					<a href="#" class="linkedin"  target="_blank" title="linkedin"></a>
 				</li>
 				<li>
-					<a href="#" id="flickr"  target="_blank" title="flickr"></a>
+					<a href="#" class="flickr"  target="_blank" title="flickr"></a>
 				</li>
 			
 			</ul>
@@ -182,86 +182,8 @@
 		<a href="#"></a> 
 	</div>
 	<!-- End of Go to Top --> 	
-	<script>
-	//Слайдер, переключаемый кликом по фото 
-		//находим и скрываем вспомогательный элемент
-		var prwHelp = document.querySelector('.prw_help');
-		prwHelp.classList.add('hide');
-		//находим все фото, помещенные в слайдер
-		var imgSlider = document.querySelectorAll('.top_preview img');
-		//определяем и показываем слайдер
-		var slider = document.getElementById('top_preview');
-		slider.classList.remove('hide');
-		
-		//счетчик
-		var i = 0;	
-		var z;		
-		//при клике на слайдере переключаем у изображений класс 'prw-active'  по кругу
-		slider.onclick = function() {
-			z = i%imgSlider.length;			
-			imgSlider[z].classList.toggle('prw-active');
-			if (z >= (imgSlider.length-1)) {
-				imgSlider[0].classList.toggle('prw-active');
-			} else {
-			imgSlider[z+1].classList.toggle('prw-active');
-			};
-			++i;			
-		};
-
-		changeSliderWidth();
-		window.onresize = changeSliderWidth;
-		
-		//изменение высоты слайдера, в зависимости от его ширины и ширины окна для адаптивной модели при ширине окна менее 600px
-		function changeSliderWidth() {
-			if (document.documentElement.clientWidth < 600) {
-			slider.style.height = document.documentElement.clientWidth*0.466 + 'px';		
-			} else {
-			slider.style.height = '280px';
-			}
-		}
-		
-		//****************************************
-			//автоматический запуск слайдера
-			//через 0.5 секунды с интервалом 3 секунды;
-			var startTime = 500;
-			var stepTime = 3000;
-			setTimeout(changeSlaid, startTime);
-			//выполняет функцию UpdateTime() 
-			//и устанавливает интервал stepTime милисекунд для её повторения
-			function changeSlaid() {
-				UpdateTime();
-				setInterval(UpdateTime, stepTime);
-			}
-			//производит клик на слайдере
-			function UpdateTime() {
-				slider.click();
-			}
-			
-		/********************/
 	
-		/* Scrolling Window*/
-		var el = document.getElementById('toTop');	
-		//если окно проскроллировано на 50px, показываем кнопку для прокрутки наверх
-		el.style.display = (window.pageYOffset > '50' ? 'block' : 'none');		
-		window.onscroll = function () {
-			el.style.display = (window.pageYOffset > '50' ? 'block' : 'none');
-		}	
-		//обработчик клика по кнопки прокрутки
-		el.addEventListener('click', function(e) {
-			e.preventDefault();
-			toUp();
-		}, false);
-		
-		//функция прокрутки окна наверх
-		function toUp() {
-			//переменная скорость тем больше, чем больше промотали вниз
-			var speed = window.pageYOffset/10;
-			window.scrollBy(0,-speed);
-			if (window.pageYOffset > 0) {requestAnimationFrame(toUp);}
-			}		
-		/********************/			
-		
-	</script>
+	<script src="js/script.js"></script>
 	
   </body>
  </html>

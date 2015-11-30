@@ -10,43 +10,43 @@
 
 
  * { 
-	font-family: HelveticaNeue, Arial, sans-serif;
 	margin: 0; 
 	padding: 0; 
+	font-family: HelveticaNeue, Arial, sans-serif;
 }
 	
 }
 /* Reset CSS*/
 
 html,body {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
 
 table {
-    border-collapse:collapse;
-    border-spacing:0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 fieldset,img { 
-    border:0;
+    border: 0;
 }
 address,caption,cite,code,dfn,th,var {
-    font-style:normal;
-    font-weight:normal;
+    font-style: normal;
+    font-weight: normal;
 }
 ol,ul,li {
-    list-style:none;
-    margin:0;
-    padding:0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 caption,th {
-    text-align:left;
+    text-align: left;
 }
 q:before,q:after {
-    content:'';
+    content: '';
 }
 abbr, { 
-	border:0;
+	border: 0;
 }
 a { 
 	text-decoration: none;
@@ -72,8 +72,8 @@ footer {
 
 header .wrap,
 footer .wrap {
-	background-color: #343538;
 	overflow: auto;
+	background-color: #343538;	
 }
 
 .logo {
@@ -413,50 +413,50 @@ footer p {
         -ms-transform: rotate(360deg);
 	        transform: rotate(360deg);
 }
-#facebook {
+.social .facebook {
 	background-position: -49px -132px;
 }
-#rss {
+.social .rss {
 	background-position: -93px -132px;
 }
-#printerest {
+.social .printerest {
 	background-position: -138px -132px;
 }
-#google_plus {
+.social .google_plus {
 	background-position: -181px -132px;
 }
-#dribbble {
+.social .dribbble {
 	background-position: -226px -132px;
 }
-#linkedin {
+.social .linkedin {
 	background-position: -270px -132px;
 }
-#flickr {
+.social .flickr {
 	background-position: -314px -132px;
 }
 
-#twitter:hover{
+.social .twitter:hover{
 	background-position: -5px -166px;
 }
-#facebook:hover {
+.social .facebook:hover {
 	background-position: -49px -166px;
 }
-#rss:hover {
+.social .rss:hover {
 	background-position: -93px -166px;
 }
-#printerest:hover {
+.social .printerest:hover {
 	background-position: -138px -166px;
 }
-#google_plus:hover {
+.social .google_plus:hover {
 	background-position: -181px -166px;
 }
-#dribbble:hover {
+.social .dribbble:hover {
 	background-position: -226px -166px;
 }
-#linkedin:hover {
+.social .linkedin:hover {
 	background-position: -270px -166px;
 }
-#flickr:hover {
+.social .flickr:hover {
 	background-position: -314px -166px;
 }
 
